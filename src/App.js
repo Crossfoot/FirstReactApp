@@ -1,27 +1,11 @@
 import React, { Component } from 'react'
 import Table from './Table.js'
+import Form from './Form';
 
 class App extends Component {
    state = { 
-     characters: [
-      {
-          name: 'Charlie',
-          job: 'Janitor',
-      },
-      {
-        name: 'Mac',
-        job: 'Bouncer',
-      },
-      {
-        name: 'Dee',
-        job: 'Aspring Actress', // Shouldn't this be Aspiring?
-      },
-      {
-        name: 'Dennis',
-        job: 'Pretzel Man',
-      },
-    ],
-   }
+     characters: []
+   };
 
   removeCharacter = index => {
     const { characters } = this.state
@@ -39,7 +23,7 @@ class App extends Component {
     return (
       <div className="Container">
         <Table characterData={characters} removeCharacter={this.removeCharacter}/>
-        <h1>Hello, React!</h1>
+        <Form />
       </div>
     )
   }
