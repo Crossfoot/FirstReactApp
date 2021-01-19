@@ -16,6 +16,10 @@ class App extends Component {
         console.log(res);
         const characters = res.data.users_list;
         this.setState({ characters });
+      })
+      .catch(function (error) {
+        // Not handling, just logging
+        console.log(error);
       });
   }
 
